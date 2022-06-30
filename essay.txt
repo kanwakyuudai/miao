@@ -1,3 +1,2 @@
-version 0.00
-initial release
-empty
+version 1.00
+hello, world!
