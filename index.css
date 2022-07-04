@@ -2,12 +2,26 @@ body {
   background: whitesmoke;
 }
 
-ul {
+.bigTitle{
+  font-family: Pacifico, serif;
+  color: lightsalmon;
+}
+
+.midTitle:{
+  font-family: Mali, serif;
+  color: lightslategray;
+}
+
+.text{
+  font-family: Mali;
+}
+
+.taskList {
   font-family: Mali, sans-serif;
   color: grey;
 }
 
-.linklist {
+.linkList {
   height: 100px;
   width: 500px;
   text-align: center;
