@@ -12,27 +12,19 @@
 
 </head>
 <style>
-  :root {
-    --penguin-size: 300px;
-    --penguin-skin: gray;
-    --penguin-belly: white;
-    --penguin-beak: orange;
-  }
-
-  @media (max-width: 350px) {
-    :root {
-      --penguin-size:200px;
-      --penguin-skin:black;
-    }
+  body {
+    background: whitesmoke;
   }
 
   .penguin {
+    --penguin-skin: gray;
+    --penguin-beak: orange;
     position: absolute;
     margin: auto;
     display: block;
     margin-top: 5%;
-    width: var(--penguin-size, 300px);
-    height: var(--penguin-size, 300px);
+    width: 500px;
+    height: 500px;
   }
 
   .right-cheek {
@@ -81,35 +73,15 @@
   }
 
   .right-hand {
-    top: 5%;
-    left: 25%;
-    background: var(--penguin-skin, black);
+    top: 0%;
+    left: -5%;
+    background: var(--penguin-skin, gray);
     width: 30%;
     height: 60%;
     border-radius: 30% 30% 120% 30%;
-    transform: rotate(130deg);
+    transform: rotate(45deg);
     z-index: -1;
-    animation-duration: 3s;
-    animation-name: wave;
-    animation-iteration-count: infinite;
-    transform-origin:0% 0%;
-    animation-timing-function: linear;
   }
-
-  @keyframes wave {
-      10% {
-        transform: rotate(110deg);
-      }
-      20% {
-        transform: rotate(130deg);
-      }
-      30% {
-        transform: rotate(110deg);
-      }
-      40% {
-        transform: rotate(130deg);
-      }
-    }
 
   .left-hand {
     top: 0%;
@@ -164,10 +136,10 @@
 
   .sparkle {
     top: 25%;
-    left:-23%;
+    left: 15%;
     background: white;
-    width: 150%;
-    height: 100%;
+    width: 35%;
+    height: 35%;
     border-radius: 50%;
   }
 
@@ -207,13 +179,66 @@
     border-radius: 50%;
   }
 
-  body {
-    /*background:#c6faf1;*/
-    background:whitesmoke;
-
+  .penguin * {
+    position: absolute;
   }
 
-  .penguin * {
+  :root {
+    --wavehand-size: 300px;
+    --wavehand-skin: gray;
+    --wavehand-belly: white;
+    --wavehand-beak: orange;
+  }
+
+  @media (max-width: 350px) {
+    :root {
+      --wavehand-size:200px;
+      --wavehand-skin:black;
+    }
+  }
+
+  .wavehand {
+    position: absolute;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    margin-left: 65%;
+    width: var(--penguin-size, 500px);
+    height: var(--penguin-size, 500px);
+  }
+
+  .wave-right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--wavehand-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .wavehand * {
     position: absolute;
   }
 
@@ -233,6 +258,29 @@
   <div class="penguin">
     <div class="penguin-bottom">
       <div class="right-hand"></div>
+      <div class="left-hand"></div>
+      <div class="right-feet"></div>
+      <div class="left-feet"></div>
+    </div>
+    <div class="penguin-top">
+      <div class="right-cheek"></div>
+      <div class="left-cheek"></div>
+      <div class="belly"></div>
+      <div class="right-eye">
+        <div class="sparkle"></div>
+      </div>
+      <div class="left-eye">
+        <div class="sparkle"></div>
+      </div>
+      <div class="blush-right"></div>
+      <div class="blush-left"></div>
+      <div class="beak-top"></div>
+      <div class="beak-bottom"></div>
+    </div>
+  </div>
+  <div class="wavehand">
+    <div class="penguin-bottom">
+      <div class="wave-right-hand"></div>
       <div class="left-hand"></div>
       <div class="right-feet"></div>
       <div class="left-feet"></div>
