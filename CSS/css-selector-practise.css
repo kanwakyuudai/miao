@@ -1,3 +1,10 @@
+body{
+  background:
+  linear-gradient(217deg, rgba(255, 235, 171, 0.8), rgba(255,0,0,0) 70.71%),
+  linear-gradient(127deg, rgba(165,165,230,.8), rgba(0,255,0,0) 70.71%),
+  linear-gradient(336deg, rgba(195,240,240,.8), rgba(0,0,255,0) 70.71%);
+}
+
 body > p:first-of-type {
   color:red;
 }
@@ -78,7 +85,7 @@ div.prime li:nth-of-type(2n+4),
 div.prime li:nth-of-type(3n+6),
 div.prime li:nth-of-type(5n+10),
 div.prime li:nth-of-type(7n+14) {
-  color: pink;
+  color: darkorchid;
 }
 
 
@@ -88,5 +95,5 @@ div.prime li:not(
   div.prime li:nth-of-type(5n+10),
   div.prime li:nth-of-type(7n+14)
 ) {
-  color: orange;
+  color: orangered;
 }
