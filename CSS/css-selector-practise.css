@@ -1,0 +1,92 @@
+body > p:first-of-type {
+  color:red;
+}
+
+body > p.a:nth-of-type(2):focus {
+  color: blue;
+}
+
+body > p.a:nth-of-type(2):hover {
+  color: red;
+}
+
+body > p.a:nth-of-type(2):active {
+  color: green;
+}
+
+p.a.c > span:first-of-type {
+  color: red;
+}
+
+p.a.c > span > span:first-of-type {
+  color: green;
+}
+
+p.a.c > span > span:last-of-type {
+  color: blue;
+}
+
+:visited {
+  color: orange;
+}
+
+:link {
+  color: pink;
+}
+
+a[href^="mailto" i][href$=".com" i] {
+  color: blue;
+}
+
+a[href^="tel:"] {
+  color: yellow;
+}
+
+a[href$=".pdf" i] {
+  font-size: 30px;
+}
+
+div.a li:nth-of-type(n + 4) {
+  color: red;
+}
+
+div.a li:nth-of-type(n + 8) {
+  color: black;
+}
+
+div.b li:nth-of-type(n) {
+  color: red;
+}
+
+div.b li:nth-of-type(n + 26) {
+  color: black;
+}
+
+div.b li:nth-of-type(n + 35) {
+  color: blue;
+}
+
+div.b li:nth-of-type(n + 51) {
+  color: black;
+}
+
+div.b li:nth-of-type(n + 65) {
+  color: green;
+}
+
+div.prime li:nth-of-type(2n+4),
+div.prime li:nth-of-type(3n+6),
+div.prime li:nth-of-type(5n+10),
+div.prime li:nth-of-type(7n+14) {
+  color: pink;
+}
+
+
+div.prime li:not(
+  div.prime li:nth-of-type(2n+4),
+  div.prime li:nth-of-type(3n+6),
+  div.prime li:nth-of-type(5n+10),
+  div.prime li:nth-of-type(7n+14)
+) {
+  color: orange;
+}
