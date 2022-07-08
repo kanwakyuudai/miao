@@ -1,0 +1,73 @@
+body{
+  background:
+  linear-gradient(217deg, rgba(217, 205, 144, 0.8), rgba(255,0,0,0) 70.71%),
+  linear-gradient(127deg, rgba(102,186,183,.8), rgba(0,255,0,0) 70.71%),
+  linear-gradient(336deg, rgba(254,223,225,.8), rgba(0,0,255,0) 70.71%);
+}
+
+h1 > span {
+  color: #C1328E;
+}
+
+h1 {
+  text-shadow: 2px 2px 0 #7b7b7b, 3px 3px 0 #7b7b7b
+}
+
+h3 {
+  font-size: 50px;
+  text-shadow: 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45;
+  color: white;
+}
+
+.b {
+  font-size: 36px;
+}
+
+.b input {
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Berkshire Swash', 'ZCOOL QingKe HuangYou', 'Arial', '楷体';
+  font-size: 36px;
+  text-transform: capitalize;
+  font-variant: small-caps;
+}
+
+.a {
+  font-style: italic;
+  font-size: 32px;
+  text-align: right;
+}
+
+.a b span::before {
+  content: "aaa ";
+}
+
+.a b span::after {
+  content: " aaa";
+}
+
+.a b span {
+  color: #33A6B8;
+  text-decoration: underline;
+  text-decoration-color: #005CAF;
+}
+
+.a span {
+  text-decoration: underline line-through;
+  text-decoration-color: #535953;
+}
+
+.d {
+  text-indent: 2em;
+  line-height: 2;
+  letter-spacing: 6px;
+  word-spacing: 12px;
+  text-align: justify;
+}
+
+.c span {
+  font-size: 1.5em;
+}
