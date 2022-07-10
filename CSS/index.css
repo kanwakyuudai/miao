@@ -3,50 +3,94 @@ body{
   linear-gradient(217deg, rgba(255, 235, 171, 0.8), rgba(255,0,0,0) 70.71%),
   linear-gradient(127deg, rgba(165,165,230,.8), rgba(0,255,0,0) 70.71%),
   linear-gradient(336deg, rgba(195,240,240,.8), rgba(0,0,255,0) 70.71%);
+  background-attachment: fixed;
+  text-align: left;
+  font-size: calc(10px + 0.33vw);
+  -webkit-font-smoothing: antialiased;
+  padding: 5vh 10vw;
 }
 
-.bigTitle {
+div ul li code {
+  font-family: monospace;
+  color: #302833;
+}
+
+h1 {
   font-family: Pacifico;
+  font-size: 3.5em;
   text-transform: capitalize;
   font-variant: small-caps;
   color: #f8f4e6;
   text-shadow: 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45, 0 0 2px #CB1B45;
 }
 
-.intro {
+h2 {
   font-family: Berkshire Swash;
-  font-size: 32px;
+  font-size: 2.2em;
+  text-transform: capitalize;
+  color: #393f4c;
 }
 
-.linkList {
+div:first-of-type {
+  font-family: 'Rubik';
+  font-size: 1.6em;
+  font-weight: 300;
+  line-height: 1.4;
+  max-width: 28em;
+}
+
+div:first-of-type h3 {
+  font-weight: 500;
+  font-size: 2em;
+}
+/* Set task list style */
+
+div:nth-of-type(2) {
   font-family: Mali;
-  width: 50vw;
-  height: 100vh;
-  text-align: center;
+  font-weight: bold;
+  color: #455765;
+  font-size: 2em;
+  max-width: 28em;
 }
-
-.taskTitle {
-  color: lightslategray;
-}
-
-/* Set task list color */
 
 ul li {
   list-style: none;
 }
 
-ul li :visited {
+a {
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+a:link {
+  color: #455765;
+}
+
+a:visited {
   color: #494a41;
 }
 
-ul li :focus {
+a:focus {
   color: #00a497;
 }
 
-ul li :hover {
-  color: #c97586;
+a:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 66%;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: 16%;
+  transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  background-color: #c8c2be;
 }
 
-ul li :active {
-  color: #2ca9e1;
+a:hover:after {
+  top: 0%;
+}
+
+a:active {
+  color: #c97586;
 }
