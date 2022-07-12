@@ -1,0 +1,97 @@
+.a {
+  background-color: #2b2b2b;
+  margin: -8px;
+  width: auto;
+}
+
+.b {
+  background-color: #2b2b2b;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.c {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.d {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.d div {
+  box-sizing: border-box;
+  width: 180px;
+  height: 40px;
+  border: solid 3px black;
+  padding: 5px;
+  text-align: center;
+  background-color: #98d98e;
+  margin-bottom: 15px;
+  line-height: 1.5em;
+}
+
+.d div:nth-of-type(n + 5) {
+  background-color: #bce2e8;
+  margin-left: 210px;
+}
+
+.d div:nth-of-type(n + 9) {
+  background-color: #deb068;
+  margin-left: 420px;
+}
+
+.d div:nth-of-type(4n + 5) {
+  margin-top: -220px;
+}
+
+.d div:hover {
+  background-color: #f09199;
+}
+
+.e {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.f {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  margin-top: -1px;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding:0px
+}
+
+li {
+  padding-top: 1px;
+  border-bottom: 1px dotted ;
+  margin-bottom: -1px;
+}
+
+.g {
+  background-color: #2c4f54;
+  margin: 15px -8px;
+  width: auto;
+}
+
+.h, .i {
+  background-color: #2c4f54;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-align: center;
+}

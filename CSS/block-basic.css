@@ -1,0 +1,46 @@
+.a {
+  background-color: #281a14;
+  margin: 20px 10px;
+  width: auto;
+}
+
+.b {
+  background-color: #281a14;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.c {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f3f3f3;
+  border: solid 2px black;
+  padding: 20px 10px;
+}
+
+.d, .f {
+  overflow: auto;
+  height: 4em;
+}
+
+.e {
+  background-color: #2a4073;
+  height: 2.5em;
+  margin: 15px 0;
+}
+
+.e:hover {
+  margin: 15px -10px;
+}
+
+.g {
+  margin: 5% auto;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #f8b500;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
