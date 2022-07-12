@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  min-width: 930px;
+  min-width: 950px;
 }
 
 .leftside {
@@ -12,15 +12,13 @@ body {
 }
 
 .leftside h1 {
-  font-size: 24px;
-  text-align: right;
-  margin: 0 0.5em;
-  line-height: 2.5em;
+  font-size: 28px;
+  text-align: center;
 }
 
 .leftside button {
   width: 50px;
-  height: 30px;
+  height: 20px;
   font-size: 12px;
 }
 
@@ -44,13 +42,14 @@ main {
 
 .indextitle {
   margin: auto 20px;
+  font-size: 32px;
 }
 
 .meaning ol {
   border: solid 2px;
   margin: auto -2px;
   overflow: auto;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 120px);
 }
 
 .mid-right {
