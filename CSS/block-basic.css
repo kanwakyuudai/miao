@@ -13,12 +13,14 @@
 }
 
 .c {
-  width: 600px;
+  width: auto;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: #f3f3f3;
   border: solid 2px black;
   padding: 20px 10px;
+  box-sizing: border-box;
 }
 
 .d, .f {

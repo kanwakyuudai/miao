@@ -36,6 +36,7 @@
   background-color: #98d98e;
   margin-bottom: 15px;
   line-height: 1.5em;
+  font-size: 16px;
 }
 
 .d div:nth-of-type(n + 5) {
