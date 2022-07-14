@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  min-width: 950px;
+  font-size: 0;
+}
+
+.leftside {
+  border: solid 2px;
+  width: 200px;
+  height: 100vh;
+  background-color: #abced8;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+.leftside h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.leftside button {
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.leftside ul {
+  list-style: none;
+  overflow: auto;
+  height: calc(100vh - 120px);
+}
+
+main {
+  border: solid 2px;
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: top;
+  width: calc(100% - 600px);
+  background-color: #f3f3f2;
+  min-width: 300px;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.indextitle {
+  margin: auto 20px;
+  font-size: 32px;
+}
+
+.meaning ol {
+  border: solid 2px;
+  margin: auto -2px;
+  overflow: auto;
+  height: calc(100vh - 120px);
+}
+
+.mid-right {
+  border: solid 2px;
+  font-size: 20px;
+  vertical-align: top;
+  display: inline-block;
+  background-color: #ffdb4f;
+  height: 100vh;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+div h2 {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.rightside {
+  border: solid 2px;
+  font-size: 20px;
+  vertical-align: top;
+  display: inline-block;
+  background-color: #b0ca71;
+  height: 100vh;
+  width: 200px;
+  box-sizing: border-box;
+}
