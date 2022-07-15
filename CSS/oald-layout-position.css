@@ -1,0 +1,85 @@
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 950px;
+  height: 100%;
+  width: 100%;
+}
+
+.leftside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #abced8;
+  font-size: 20px;
+  overflow: auto;
+}
+
+.leftside h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.leftside button {
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.leftside ul {
+  list-style: none;
+  overflow: auto;
+}
+
+main {
+  position: absolute;
+  left: 200px;
+  top: 0;
+  bottom: 0;
+  right: 400px;
+  font-size: 20px;
+  background-color: #f3f3f2;
+  min-width: 300px;
+  overflow: auto;
+}
+
+.indextitle {
+  margin: auto 20px;
+  font-size: 32px;
+}
+
+.meaning ol {
+  overflow: auto;
+}
+
+.mid-right {
+  position: absolute;
+  top: 0;
+  right: 200px;
+  bottom: 0;
+  width: 200px;
+  font-size: 20px;
+  background-color: #ffdb4f;
+}
+
+div h2 {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.rightside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  font-size: 20px;
+  background-color: #b0ca71;
+}
