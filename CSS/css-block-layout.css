@@ -98,27 +98,30 @@ li {
 }
 
 .j {
-  width: 600px;
+  width: 1020px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  font-size: 0;
+  overflow: hidden;
 }
 
-.j div {
+.j ul {
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+  margin: -8px -15px;
+
+}
+
+.j ul li{
   box-sizing: border-box;
   width: 180px;
   height: 40px;
   border: solid 3px black;
   display: inline-block;
-  font-size: 16px;
-  padding: 5px;
+  font-size: 26px;
   text-align: center;
-  background-color: #98d98e;
-  margin-bottom: 15px;
-  margin-right: 30px;
-}
-
-.j div:nth-of-type(3n + 3) {
-  margin-right: 0;
+  background-color: #e0ebaf;
+  margin: 8px 15px;
 }
