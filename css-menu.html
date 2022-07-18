@@ -18,8 +18,8 @@
       position: relative;
     }
 
-    li svg {
-      width: 12px;
+    li hr {
+      margin: 10px -10px;
     }
 
     .icon {
@@ -38,6 +38,15 @@
       position: relative;
       background-color: rgba(33, 37, 43, 0.9);
       border-radius: 5%;
+    }
+
+    .Submenu li {
+      position: relative;
+    }
+
+    .Submenu li span {
+      position: absolute;
+      right: 0;
     }
 
     .subSubmenu {
@@ -206,32 +215,18 @@
       <li>新建文本檔案</li>
       <li>新建檔案</li>
       <li>新建窗口</li>
-      <hr>
-      <li>打開檔案</li>
+      <li><hr></li>
+      <li>打開檔案<span>Ctrl+O</span></li>
       <li>打開檔案夹</li>
       <li>从檔案打開工乍區</li>
-      <li>
-        打开最近文件
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="next"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-              >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9 5l7 7-7 7"/></svg>
-      </li>
+      <li>打开最近文件<span>&gt;</span></li>
     </ul>
   </div>
   <div class="menuTitle">編纂
     <ul class="Submenu">
       <li>勶消</li>
       <li>恢復</li>
-      <hr>
+      <li><hr></li>
       <li>前切</li>
       <li>複製</li>
       <li>黏貼</li>
@@ -247,7 +242,7 @@
     <ul class="Submenu">
       <li>命令行</li>
       <li>檔案輨理</li>
-      <hr>
+      <li><hr></li>
       <li>外觀</li>
       <li>布局</li>
       </ul>

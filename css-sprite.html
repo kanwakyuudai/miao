@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS sprite practice</title>
+  <style>
+    html,body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .main {
+      position: relative;
+      margin: 100px;
+    }
+
+    .voiceSearch {
+      left: -15%; top: 5px;
+      margin: 0 10px;
+      background-image: url("source/bing_icons.png");
+      background-position: -45px -39px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .voiceSearch:hover {
+      background-image: url("source/bing_icons.png");
+      background-position: -45px 1px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .search {
+      left: 105%; top: 5px;
+      margin: 0 10px;
+      background-image: url("source/bing_icons.png");
+      background-position: -85px -39px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .search:hover {
+      background-image: url("source/bing_icons.png");
+      background-position: -85px 1px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .lens {
+      left: -10%; top: 5px;
+      margin: 0 10px;
+      background-image: url("source/bing_icons.png");
+      background-position: 2px -39px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .lens:hover {
+      background-image: url("source/bing_icons.png");
+      background-position: 2px 1px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .bing {
+      left: 0; top: 0; right: 0; bottom: 0;
+      margin: auto;
+      background-image: url(source/bing_icons.png);
+      background-position: -592px -78px;
+      width: 239px;
+      height: 38px;
+    }
+
+    .main div {
+      position: absolute;
+    }
+
+    .searchBar div {
+      position: absolute;
+    }
+
+    .searchBar {
+      left: 0; top: 250px; right: 0; bottom: 0;
+      margin: auto;
+      width: 50%;
+    }
+    input {
+      width: 100%;
+      color: #111;
+      font-size: 22px;
+      background-color: #f3f3f3;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="bing" onclick="window.open('https://bing.com')"></div>
+    <div class="searchBar"><input type="text">
+      <div class="voiceSearch"></div>
+      <div class="search"></div>
+      <div class="lens"></div>
+    </div>
+
+  </div>
+</body>
+</html>
