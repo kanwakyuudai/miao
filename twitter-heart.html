@@ -6,11 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twitter Heart Animation</title>
   <style>
+    div {
+      display: inline-block;
+    }
+
+    .star {
+      vertical-align:top;
+      margin-top: 25px;
+      width: 70px;
+      height: 50px;
+      background: url(source/twitter_fave.png) no-repeat;
+      background-position: 0px 0px;
+      transition: none;
+      cursor: pointer;
+    }
+
+    .star:focus {
+      background-position: -3519px 0px;
+      transition: 1s steps(55);
+    }
+
     .heart {
       margin: 0;
       width: 100px;
       height: 100px;
-      background-image: url(source/twitter_heart_frames.png);
+      background: url(source/twitter_heart_frames.png) no-repeat;
       background-position: 0px 0px;
       transition: none;
       cursor: pointer;
@@ -23,6 +43,7 @@
   </style>
 </head>
 <body>
-  <div class="heart" tabindex="0"></div>
+  <div class="star" tabindex="0"></div>
+  <div class="heart" tabindex="1"></div>
 </body>
 </html>
