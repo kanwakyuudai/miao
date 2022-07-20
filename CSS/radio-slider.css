@@ -1,0 +1,130 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  height: 100%;
+  min-height:100%;
+}
+body {
+  margin: 0;
+  padding:0;
+  font-size:100%;
+  min-height:100%;
+  color: #000;
+  background:#ff2f4b;
+}
+section {
+  position: relative;
+  width:100%;
+  max-width:100%;
+  min-width: 1300px;
+  padding:0;
+  margin:0 auto;
+}
+
+#header {
+  display: block;
+  width:100%;
+  padding:50px 0 1em;
+  margin: 0 auto;
+  background: #fafa00;
+}
+
+#header img{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 760px;
+}
+
+.title {
+  width: 100%;
+  margin:0 auto 20px;
+  text-align: center;
+  color: #fff;
+  background: #000;
+  border-top: 3px solid #00ffff;
+  border-bottom: 3px solid #ff00ff;
+  font-family: 'Dela Gothic One';
+  font-size: 62px;
+}
+
+input {
+  display: none;
+}
+
+.images {
+  position: relative;
+  width: 640px;
+  height: 360px;
+  font-size: 0px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.images img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+input:nth-of-type(1):checked ~ .images img:nth-of-type(1),
+input:nth-of-type(2):checked ~ .images img:nth-of-type(2),
+input:nth-of-type(3):checked ~ .images img:nth-of-type(3),
+input:nth-of-type(4):checked ~ .images img:nth-of-type(4) {
+  opacity: 1;
+}
+
+input:nth-of-type(1):checked ~ .leftSelector label:nth-of-type(1),
+input:nth-of-type(2):checked ~ .leftSelector label:nth-of-type(2),
+input:nth-of-type(3):checked ~ .rightSelector label:nth-of-type(1),
+input:nth-of-type(4):checked ~ .rightSelector label:nth-of-type(2) {
+  background-color: #caca00;
+}
+
+.leftSelector {
+  position: absolute;
+  left: 100px;
+  bottom: 200px;
+}
+
+.leftSelector label {
+  display: block;
+  font-family: 'Dela Gothic One';
+  font-size: 32px;
+  color: #00ffff;
+  margin: 5px;
+}
+
+.rightSelector {
+  position: absolute;
+  right: 0px;
+  bottom: 200px;
+}
+
+.rightSelector label {
+  display: block;
+  font-family: 'Dela Gothic One';
+  font-size: 32px;
+  color: #00ffff;
+  margin: 5px;
+}
+
+#footer {
+  width: 100%;
+  margin:20px 0 0;
+  padding:1em 0 0;
+  text-align: center;
+}
+
+#footer .copyright{
+  color: white;
+  width:100%;
+  margin: 1em 0 0;
+  padding: 0;
+  background: #000;
+  border-top: 3px solid #fafa00;
+}
