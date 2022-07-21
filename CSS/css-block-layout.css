@@ -125,3 +125,18 @@ li {
   background-color: #e0ebaf;
   margin: 8px 15px;
 }
+
+.flex {
+  display: flex;
+  flex-flow: wrap;
+  gap: 15px 30px;
+  width: 600px;
+  margin: 20px auto;
+}
+
+.flex div {
+  border: solid 3px;
+  flex: 180px 0 1;
+  height: 40px;
+  box-sizing: border-box;
+}
