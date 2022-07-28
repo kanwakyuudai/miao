@@ -27,6 +27,7 @@ body {
 
 * a {
   text-decoration: none;
+  color: #b6b0a6;
 }
 
 .top-bar {
@@ -90,11 +91,13 @@ body {
 }
 
 .top {
-  border-color: $top-bgc;
-  width: $page-width;
-  margin: 0 auto;
+  background-color: $top-bgc;
+  width: calc(100% - 116px);
+  height: 770px;
+  padding: 0 0 0 116px;
   .logo-index-search {
     height: 100px;
+    width: $page-width;
     position: relative;
     .logo {
       width: 56px;
@@ -190,7 +193,7 @@ body {
     }
   }
   .slide-show {
-    width: 100%;
+    width: $page-width;
     height: 460px;
     position: relative;
     input[type="radio"] {
@@ -224,16 +227,18 @@ body {
         display: inline-block;
         width: 10px;
         height: 10px;
-        background-color: grey;
-        text-shadow: rgb(78 85 88 / 85%) 0px 0px 0.69px, rgb(93 100 104 / 80%) 0px 0px 0.6px, rgb(35 38 39 / 27%) 0px 0px 0.45px;
+        background-color: #1111;
         cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid #A4A7AA;
+
       }
     }
     .category {
       position: absolute;
       width: 234px;
       height: 100%;
-      background-color: rgba($color: #e0e0e0, $alpha: 0.1);
+      background-color: rgba($color: #707070, $alpha: 0.2);
       & > ul {
         padding: 20px 0;
         list-style-type: none;
@@ -257,10 +262,115 @@ body {
             content: "\E623";
             font-family: mifont;
           }
+          .products {
+            width: 992px;
+            height: 460px;
+            background-color: $top-bgc;
+            position: absolute;
+            left: 234px;
+            top: -20px;
+            visibility: hidden;
+            z-index: 20;
+            display: flex;
+            flex-flow: column wrap;
+            box-shadow: 1px 1px 10px #222222;
+            border: 1px solid #505050;
+            box-sizing: border-box;
+            li {
+              flex: 0 0 76.33333333px;
+              width: 248px;
+              cursor: pointer;
+              img {
+                width: 40px;
+                float: left;
+                margin: 15px;
+              }
+              &:hover a {
+                color: $mi-orange;
+              }
+              a {
+                font-size: 14px;
+                color: #c8c3bc;
+                line-height: 76.33333333px;
+              }
+              a:hover {
+                color: $mi-orange;
+              }
+            }
+          }
+          .tv {
+            top: -62px;
+          }
+          .laptop {
+            top: -104px;
+          }
         }
         & > li:hover {
           background-color: $mi-orange;
         }
+        & > li:hover > .products {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.sub-row {
+  width: $page-width;
+  height: 170px;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 14px;
+  justify-content: space-between;
+  .channel-list {
+    background-color: #42474a;
+    width: 234px;
+    height: 100%;
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      li {
+        height: 82px;
+        flex: 0 0 76px;
+        display: flex;
+        flex-flow: column nowrap;
+        opacity: 0.6;
+        position: relative;
+        cursor: pointer;
+        img {
+          width: 24px;
+          margin: 18px auto 4px auto;
+        }
+        a {
+          font-size: 12px;
+          color: #e8e6e3;
+          text-align: center;
+        }
+      }
+      li:hover {
+        opacity: 1;
+      }
+      li::before {
+        position: absolute;
+        content: "";
+        top: 3px;
+        left: 6px;
+        width: 64px;
+        height: 1px;
+        background-image: initial;
+        background-color: #505050;
+      }
+      li::after {
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: 0;
+        width: 1px;
+        height: 70px;
+        background-image: initial;
+        background-color: #505050;
       }
     }
   }
@@ -321,5 +431,23 @@ body {
   }
   .fixed-icons:last-of-type:hover span {
     color: $mi-orange;
+  }
+}
+
+.main {
+  width: $page-width;
+  // height: 7079px;
+  padding: 0 116px;
+  background-color: $main-bgc;
+  display: flex;
+  flex-flow: column nowrap;
+  img {
+    margin: 22px 0;
+  }
+  .main-blocks {
+    width: $page-width;
+    height: 686px;
+    border: $bd;
+    margin-bottom: 8px;
   }
 }
