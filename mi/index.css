@@ -60,22 +60,44 @@ body {
   float: right;
   width: 120px;
   height: 40px;
-  line-height: 40px;
   text-align: center;
   background-color: #323638;
+  position: relative;
 }
 .top-bar .container .cart a {
   margin: auto;
+  line-height: 40px;
+}
+.top-bar .container .cart .cart-list {
+  width: 316px;
+  height: 0px;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  background-color: #191a1c;
+  z-index: 10;
+  box-shadow: 1px 1px 10px #222222;
+  color: transparent;
+}
+.top-bar .container .cart .cart-list span {
+  line-height: 100px;
 }
 .top-bar .container .cart a:before {
   content: "\e60c";
   font-family: mifont;
   font-size: 1.5em;
+  vertical-align: baseline;
 }
 .top-bar .container .cart:hover {
   background-color: #191a1c;
 }
-.top-bar .container .cart a:hover {
+.top-bar .container .cart:hover .cart-list {
+  height: 100px;
+  visibility: visible;
+  color: #e0e0e0;
+  transition: height 0.2s, color 0s 0.5s;
+}
+.top-bar .container .cart:hover a {
   color: #fe6a00;
 }
 .top-bar .container .login {
@@ -92,25 +114,27 @@ body {
 .top .logo-index-search {
   height: 100px;
   width: 1226px;
-  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .top .logo-index-search .logo {
   width: 56px;
   height: 56px;
   background-image: url(./logo-mi2.png);
   background-size: contain;
+  background-repeat: no-repeat;
   float: left;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
   cursor: pointer;
+}
+.top .logo-index-search .logo:active {
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
 }
 .top .logo-index-search .index {
   height: 100%;
-  position: absolute;
-  left: 18%;
-  margin: auto;
 }
 .top .logo-index-search .index ul {
   color: #c8c3bc;
@@ -121,6 +145,9 @@ body {
 .top .logo-index-search .index ul li {
   margin: 0 10px;
 }
+.top .logo-index-search .index ul li a:hover {
+  color: #fe6a00;
+}
 .top .logo-index-search .index ul a {
   display: inline-block;
   margin: auto;
@@ -130,18 +157,70 @@ body {
   font-size: 16px;
   transition: 0.2s;
 }
-.top .logo-index-search .index ul a:hover {
+.top .logo-index-search .index ul .index-submenu {
+  background-color: #191a1c;
+  box-sizing: border-box;
+  border-top: 1px solid #707070;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  padding: 0 calc(50% - 613px);
+  z-index: 30;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.top .logo-index-search .index ul .index-submenu li {
+  width: 204.3333333333px;
+  height: 100%;
+  position: relative;
+}
+.top .logo-index-search .index ul .index-submenu li a {
+  line-height: 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.top .logo-index-search .index ul .index-submenu li a img {
+  display: block;
+  width: 160px;
+  margin: 40px auto 10px auto;
+}
+.top .logo-index-search .index ul .index-submenu li a .title {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+}
+.top .logo-index-search .index ul .index-submenu li a .price {
+  width: 100%;
+  font-size: 12px;
   color: #fe6a00;
+  text-align: center;
+  margin: 0;
+}
+.top .logo-index-search .index ul .index-submenu li:not(:last-of-type):after {
+  position: absolute;
+  content: "";
+  top: 50px;
+  right: 0;
+  width: 0.5px;
+  height: 100px;
+  background-image: initial;
+  background-color: #505050;
+}
+.top .logo-index-search .index ul:hover .index-submenu {
+  height: 230px;
+  visibility: visible;
+  transition: 0.2s;
 }
 .top .logo-index-search .search {
   padding: 0;
   width: 297px;
   height: 50px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+  margin: 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: end;
@@ -149,7 +228,7 @@ body {
 .top .logo-index-search .search input {
   box-sizing: border-box;
   padding: 0 5px;
-  width: 221px;
+  width: 245px;
   height: 50px;
   background-color: transparent;
   border: 1px solid #505050;
