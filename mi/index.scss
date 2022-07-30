@@ -548,7 +548,7 @@ body {
         margin: 0;
         line-height: 58px;
       }
-      .more {
+      > .more {
         line-height: 58px;
         font-size: 16px;
         .icon {
@@ -569,14 +569,14 @@ body {
           font-style: normal;
         }
       }
-      .more:hover {
+      > .more:hover {
         color: $mi-orange;
       }
       .tab {
         width: 124px;
         height: 42px;
         position: relative;
-        ul {
+        > .tab-ul {
           height: 0;
           li {
             position: absolute;
@@ -585,20 +585,203 @@ body {
             height: 26px;
             font-size: 16px;
             cursor: pointer;
+            .cards.inside-tabs.first-tab {
+              width: 978px;
+              height: 614px;
+              position: absolute;
+              top: 42px;
+              right: -62px;
+              z-index: 50;
+              ul {
+                width: 978px;
+                height: 614px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-content: space-between;
+                align-items: flex-start;
+                li {
+                  width: 234px;
+                  height: 300px;
+                  background-color: $top-bgc;
+                  position: relative;
+                  top: 0;
+                  transition: 0.5s;
+                  flex: 0 0 auto;
+                  a {
+                    padding: 20px 0;
+                    img {
+                      width: 160px;
+                      margin: 20px 37px 15px 37px;
+                    }
+                    h3 {
+                      font-size: 14px;
+                      margin: 0;
+                      text-align: center;
+                    }
+                    p {
+                      text-align: center;
+                    }
+                    .desc {
+                      font-size: 12px;
+                      margin: 5px auto;
+                    }
+                    .price {
+                      font-size: 14px;
+                      color: $mi-orange;
+                    }
+                  }
+                }
+                li:hover {
+                  top: -5px;
+                  box-shadow: 0px 0px 10px #505050;
+                  transition: 0.5s;
+                }
+                > .more {
+                  height: 143px;
+                  position: relative;
+                  a {
+                    display: block;
+                    padding: 55px 0px;
+                    div {
+                      width: 94px;
+                      height: 40px;
+                      margin: 0px 110px 0px 30px;
+                      font-size: 18px;
+                      display: flex;
+                      flex-flow: column nowrap;
+                      justify-content: space-between;
+                      span {
+                        display: block;
+                        font-size: 12px;
+                      }
+                    }
+                    i {
+                      width: 48px;
+                      height: 48px;
+                      display: block;
+                      font-size: 48px;
+                      line-height: 48px;
+                      color: $mi-orange;
+                      position: absolute;
+                      right: 35px;
+                      bottom: 47px;
+                    }
+                    .icon::after {
+                      content: "\E615";
+                      font-family: mifont;
+                      font-style: normal;
+                    }
+                  }
+                }
+              }
+            }
+            .cards.inside-tabs.rest-tab {
+              width: 978px;
+              height: 614px;
+              position: absolute;
+              top: 42px;
+              right: 0px;
+              ul {
+                background-color: $main-bgc;
+                width: 978px;
+                height: 614px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                align-content: space-between;
+                align-items: flex-start;
+                li {
+                  width: 234px;
+                  height: 300px;
+                  margin: 0 14px 14px 0;
+                  background-color: $top-bgc;
+                  position: relative;
+                  top: 0;
+                  transition: 0.5s;
+                  flex: 0 0 auto;
+                  a {
+                    padding: 20px 0;
+                    img {
+                      width: 160px;
+                      margin: 20px 37px 15px 37px;
+                    }
+                    h3 {
+                      font-size: 14px;
+                      margin: 0;
+                      text-align: center;
+                    }
+                    p {
+                      text-align: center;
+                    }
+                    .desc {
+                      font-size: 12px;
+                      margin: 5px auto;
+                    }
+                    .price {
+                      font-size: 14px;
+                      color: $mi-orange;
+                    }
+                  }
+                }
+                li:hover {
+                  top: -5px;
+                  box-shadow: 0px 0px 10px #505050;
+                  transition: 0.5s;
+                }
+                > .more {
+                  height: 143px;
+                  position: relative;
+                  a {
+                    display: block;
+                    padding: 55px 0px;
+                    div {
+                      width: 94px;
+                      height: 40px;
+                      margin: 0px 110px 0px 30px;
+                      font-size: 18px;
+                      display: flex;
+                      flex-flow: column nowrap;
+                      justify-content: space-between;
+                      span {
+                        display: block;
+                        font-size: 12px;
+                      }
+                    }
+                    i {
+                      width: 48px;
+                      height: 48px;
+                      display: block;
+                      font-size: 48px;
+                      line-height: 48px;
+                      color: $mi-orange;
+                      position: absolute;
+                      right: 35px;
+                      bottom: 47px;
+                    }
+                    .icon::after {
+                      content: "\E615";
+                      font-family: mifont;
+                      font-style: normal;
+                    }
+                  }
+                }
+              }
+            }
           }
-          li:last-of-type {
+          > li:last-of-type {
             right: 0;
           }
-          li:nth-last-of-type(2) {
+          > li:nth-last-of-type(2) {
             right: 62px;
           }
-          li:nth-last-of-type(3) {
+          > li:nth-last-of-type(3) {
             right: 92px;
           }
-          li:nth-last-of-type(4) {
+          > li:nth-last-of-type(4) {
             right: 122px;
           }
-          li:first-of-type {
+          > li:first-of-type {
             color: $mi-orange;
             padding-bottom: 1px;
             border-bottom: 2px solid;
@@ -717,5 +900,56 @@ body {
         }
       }
     }
+    .card-box.without-tabs {
+      width: 234px;
+    }
+  }
+}
+
+.main .main-blocks .box-title .tab > .tab-ul > li {
+  transition: 0s 9999999s;
+}
+.main .main-blocks .box-title .tab > .tab-ul > li > .cards.inside-tabs {
+  transition: 0s 9999999s;
+  visibility: hidden;
+}
+.main .main-blocks .box-title .tab > .tab-ul > li > .cards.inside-tabs.first-tab {
+  visibility: visible;
+}
+.main .main-blocks .box-title .tab > .tab-ul:hover > li {
+  transition: none;
+}
+.main .main-blocks .box-title .tab > .tab-ul:hover > li > .cards.inside-tabs{
+  visibility: hidden;
+  transition: none;
+}
+.main .main-blocks .box-title .tab > .tab-ul > li:hover > .cards.inside-tabs{
+  visibility: visible;
+  transition: none;
+}
+.main .main-blocks:nth-of-type(3) .tab-ul > li:last-of-type {
+  display: none;
+}
+.main .main-blocks:nth-of-type(n + 4) .card-box.without-tabs {
+  height: 614px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  .side-img-up, .side-img-down {
+    width: 234px;
+    height: 300px;
+    flex: 0 0 auto;
+    position: relative;
+    top: 0;
+    img {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .side-img-up:hover, .side-img-down:hover {
+    top: -5px;
+    box-shadow: 0px 0px 10px #505050;
+    transition: 0.5s;
   }
 }
