@@ -146,6 +146,8 @@ body {
         display: inline-flex;
         flex-flow: row nowrap;
         margin: 0 auto;
+        height: 0;
+        // height set to 0, thus user cannot hover the space between li.
         li {
           margin: 0 10px;
           a:hover {
@@ -169,6 +171,7 @@ body {
           height: 0px;
           overflow: hidden;
           visibility: hidden;
+          transition: 0.2s;
           padding: 0 calc(50% - 613px);
           z-index: 30;
           position: absolute;
@@ -219,6 +222,9 @@ body {
           height: 230px;
           visibility: visible;
           transition: 0.2s;
+        }
+        & li:hover .index-submenu {
+          z-index: 40;
         }
       }
     }
@@ -527,7 +533,189 @@ body {
   .main-blocks {
     width: $page-width;
     height: 686px;
-    border: $bd;
     margin-bottom: 8px;
+    .box-title {
+      width: 100%;
+      height: 58px;
+      color: #c8c3bc;
+      display: flex;
+      flex-flow: row nowrap;
+      h2 {
+        display: block;
+        font-size: 22px;
+        font-weight: normal;
+        flex: 1 0 auto;
+        margin: 0;
+        line-height: 58px;
+      }
+      .more {
+        line-height: 58px;
+        font-size: 16px;
+        .icon {
+          width: 12px;
+          height: 12px;
+          padding: 3px 4px;
+          margin-left: 8px;
+          border-radius: 16px;
+          font-size: 12px;
+          line-height: 12px;
+          background: #303030;
+          vertical-align: 1px;
+          transition: all .4s;
+        }
+        .icon::after {
+          font-family: mifont;
+          content: "\E623";
+          font-style: normal;
+        }
+      }
+      .more:hover {
+        color: $mi-orange;
+      }
+      .tab {
+        width: 124px;
+        height: 42px;
+        position: relative;
+        ul {
+          height: 0;
+          li {
+            position: absolute;
+            top: 16px;
+            width: 32px;
+            height: 26px;
+            font-size: 16px;
+            cursor: pointer;
+          }
+          li:last-of-type {
+            right: 0;
+          }
+          li:nth-last-of-type(2) {
+            right: 62px;
+          }
+          li:nth-last-of-type(3) {
+            right: 92px;
+          }
+          li:nth-last-of-type(4) {
+            right: 122px;
+          }
+          li:first-of-type {
+            color: $mi-orange;
+            padding-bottom: 1px;
+            border-bottom: 2px solid;
+          }
+        }
+      }
+    }
+    .card-box {
+      width: 100%;
+      height: 628px;
+      position: relative;
+      .side-img {
+        width: 234px;
+        height: 614px;
+        position: absolute;
+        top: 0;
+        transition: 0.5s;
+        img {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+        }
+      }
+      .side-img:hover {
+        top: -5px;
+        box-shadow: 0px 0px 10px #505050;
+        transition: 0.5s;
+      }
+      .cards {
+        width: 978px;
+        height: 614px;
+        position: absolute;
+        right: 0;
+        ul {
+          width: 978px;
+          height: 614px;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-content: space-between;
+          align-items: flex-start;
+          li {
+            width: 234px;
+            height: 300px;
+            background-color: $top-bgc;
+            position: relative;
+            top: 0;
+            transition: 0.5s;
+            flex: 0 0 auto;
+            a {
+              padding: 20px 0;
+              img {
+                width: 160px;
+                margin: 20px 37px 15px 37px;
+              }
+              h3 {
+                font-size: 14px;
+                margin: 0;
+                text-align: center;
+              }
+              p {
+                text-align: center;
+              }
+              .desc {
+                font-size: 12px;
+                margin: 5px auto;
+              }
+              .price {
+                font-size: 14px;
+                color: $mi-orange;
+              }
+            }
+          }
+          li:hover {
+            top: -5px;
+            box-shadow: 0px 0px 10px #505050;
+            transition: 0.5s;
+          }
+          .more {
+            height: 143px;
+            position: relative;
+            a {
+              display: block;
+              padding: 55px 0px;
+              div {
+                width: 94px;
+                height: 40px;
+                margin: 0px 110px 0px 30px;
+                font-size: 18px;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                span {
+                  display: block;
+                  font-size: 12px;
+                }
+              }
+              i {
+                width: 48px;
+                height: 48px;
+                display: block;
+                font-size: 48px;
+                line-height: 48px;
+                color: $mi-orange;
+                position: absolute;
+                right: 35px;
+                bottom: 47px;
+              }
+              .icon::after {
+                content: "\E615";
+                font-family: mifont;
+                font-style: normal;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
