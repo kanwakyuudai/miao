@@ -463,9 +463,6 @@ body {
 }
 
 .fixed {
-  @media (max-width: 1456px) {
-
-  }
   // border: 1px solid #505050;
   width: 84px;
   height: 455px;
@@ -495,6 +492,7 @@ body {
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
+    background-color: $main-bgc;
     img {
       width: 30px;
     }
@@ -519,6 +517,24 @@ body {
   }
   .fixed-icons:hover span {
     color: $mi-orange;
+  }
+  @media (max-width: 1456px) {
+    width: 27px;
+    height: 261px;
+    left: 50%;
+    right: auto;
+    margin-left: 613px;
+    bottom: 40px;
+    .fixed-icons {
+      width: 27px;
+      height: 42px;
+      img {
+        width: 20px;
+      }
+      span {
+        display: none;
+      }
+    }
   }
 }
 
@@ -972,6 +988,9 @@ body {
       }
     }
   }
+  .main-blocks:last-of-type {
+    height: 357px;
+  }
 }
 
 // Hover tabs switch card box.
@@ -1032,4 +1051,233 @@ body {
 }
 .main .main-blocks .box-title .tab > .tab-ul > li > .cards.inside-tabs.full-box > ul{
   flex-flow: column wrap;
+}
+
+.footer {
+  width: 100%;
+  height: 472.5px;
+  background-color: $top-bgc;
+  .container {
+    width: $page-width;
+    margin: 0 auto;
+    .service {
+      height: 80px;
+      padding: 27px 0;
+      box-sizing: border-box;
+      border-bottom: 1px solid #505050;
+      ul {
+        height: 25px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        li {
+          width: 242.74px;
+          height: 100%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          em {
+            font-family: mifont;
+            font-style: normal;
+            margin-right: 6px;
+            font-size: 24px;
+            line-height: 24px;
+            vertical-align: -4px;
+          }
+          span {
+            text-align: center;
+            font-size: 16px;
+          }
+        }
+        li:not(:first-of-type) {
+          border-left: 1px solid #505050;;
+        }
+        li:first-of-type em::after {
+          content: "\E634";
+        }
+        li:nth-of-type(2) em::after {
+          content: "\E635";
+        }
+        li:nth-of-type(3) em::after {
+          content: "\E636";
+        }
+        li:nth-of-type(4) em::after {
+          content: "\E638";
+        }
+        li:nth-of-type(5) em::after {
+          content: "\E637";
+        }
+      }
+    }
+    .links {
+      height: 392.5px;
+      box-sizing: border-box;
+      padding: 40px 0;
+      .col-links {
+        float: left;
+        width: 160px;
+        margin: 0;
+        dt {
+          margin: -1px 0 26px;
+          font-size: 14px;
+          line-height: 1.25;
+          color: #b2b2b2
+        }
+        dd {
+          margin: 10px 0 0;
+          font-size: 12px;
+        }
+        a {
+          color: #959595;
+        }
+        a:hover {
+          color: #ff6700;
+        }
+      }
+      .col-contact {
+        float: right;
+        width: 248px;
+        box-sizing: border-box;
+        border-left: 1px solid #505050;
+        text-align: center;
+        color: #616161;
+        p {
+          margin: 0 0 5px 0;
+          font-size: 12px;
+        }
+        .phone {
+          font-size: 22px;
+          line-height: 1;
+          color: #ff6700;
+        }
+        a {
+          width: 118px;
+          height: 28px;
+          font-size: 12px;
+          line-height: 28px;
+          padding: 5px 25px;
+          margin: 0;
+          border: 1px solid $mi-orange;
+          color: $mi-orange;
+          cursor: pointer;
+          .iconfont-message2:before {
+            font-family: mifont;
+            font-style: normal;
+            content: "\E600";
+          }
+        }
+        a:hover {
+          color: #e8e6e3;
+          background-color: $mi-orange;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+.site-info {
+  padding: 30px 0;
+  font-size: 12px;
+  background: $main-bgc;
+}
+
+.site-info .container {
+  position: relative;
+  width: $page-width;
+  margin: auto;
+}
+
+.site-info .logo {
+  width: 56px;
+  height: 56px;
+  margin-right: 20px;
+  background: url(//s02.mifile.cn/assets/static/image/logo-mi2.png) no-repeat;
+  background-size: 56px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.site-info .info-text {
+  color: #b0b0b0;
+  padding-left: 77px;
+}
+
+.site-info .info-text p {
+  margin: 0;
+  line-height: 18px;
+}
+
+.site-info .info-text a {
+  color: #b0b0b0;
+}
+
+.site-info .info-text a:hover {
+  color: #ff6700;
+}
+
+.site-info .info-text .sites a {
+  color: #757575;
+}
+
+.site-info .info-text .sites a:hover {
+  color: #ff6700;
+}
+
+.site-info .info-text .sites .sep {
+  margin: 0;
+}
+
+.site-info .info-links {
+  height: 28px;
+  margin: 4px 0 15px;
+  padding-left: 77px;
+}
+
+.site-info .info-links a {
+  display: inline-block;
+}
+
+.site-info .info-links img {
+  width: auto;
+  height: 28px;
+  margin-left: 0;
+}
+
+.site-info .info-links .safe-auth {
+  width: 150px;
+  height: 28px;
+  overflow: hidden;
+  margin-left: 5px;
+  position: relative;
+}
+
+.site-info .info-links .safe-auth img {
+  height: 28px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+
+.site-info .info-links .safe-auth .img1 {
+  opacity: 1;
+}
+
+.site-info .info-links .safe-auth.active .img1,.site-info .info-links .safe-auth .img2 {
+  opacity: 0;
+}
+
+.site-info .info-links .safe-auth.active .img2 {
+  opacity: 1;
+}
+
+.site-info .slogan {
+  clear: both;
+  margin: 30px auto 0;
+  width: 100%;
+  height: 19px;
+  background: url(https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/global/slogan2020.png) no-repeat center 0;
 }
